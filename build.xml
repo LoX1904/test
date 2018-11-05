@@ -2,7 +2,14 @@
 <project name = "Test Project" basedir = "." default = "build">
    <property file = "build.properties"/>
    <property name = "src.dir" value ="test"/>
-   <property name = "build.dir" value ="build"/>
+   <property name = "build.dir" value ="classes"/>
+   
+   <path id = "master-classes">
+      <fileset dir = "${build.dir}/lib">
+         <include name = "*.jar"/>
+      </fileset>
+   </path>
+   
    <target name = "build" description = "Compile all .java files">
       <mkdir dir = "${build.dir}"/>
       <javac destdir = "${build.dir}" source = "1.5" target = "1.5">
