@@ -1,4 +1,4 @@
-package test;
+package test.fu;
 
 public class Func{
   public Func(){
