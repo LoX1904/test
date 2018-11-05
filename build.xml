@@ -2,6 +2,6 @@
 <project name = "Test Project" default = "info">
    <property file = "build.properties"/>
    <target name = "info">
-     <echo> Hello Test </echo>
+     <echo> Hello Test This is ${buildversion} </echo>
   </target>
 </project>
