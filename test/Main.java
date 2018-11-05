@@ -2,7 +2,8 @@ package test;
 
 public class Main{  
   public static void main(String[] args){
+    Func f = new Func();
     System.out.println("Hello");
-    System.out.println(Func.add(3, 2));
+    System.out.println(f.add(3, 2));
   }
 }
