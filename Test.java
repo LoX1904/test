@@ -1,9 +1,9 @@
 package test;
-//import test.Func;
+import test.Func;
 
 public class Test{  
   public static void main(String[] args){
     System.out.println("Hello");
-  //  System.out.println(Func.add(3, 2));
+    System.out.println(Func.add(3, 2));
   }
 }
