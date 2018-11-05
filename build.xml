@@ -12,7 +12,7 @@
    
    <target name = "build" description = "Compile all .java files">
       <mkdir dir = "${build.dir}"/>
-      <javac destdir = "${build.dir}">
+      <javac destdir = "${build.dir}" includeantruntime ="false">
          <src path = "${src.dir}"/>
          <classpath refid = "master-classpath"/>
       </javac>
