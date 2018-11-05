@@ -1,7 +1,10 @@
 package test;
 
-public final class Func{
-  public static int add(int a, int b){
+public class Func{
+  public Func(){
+  
+  }
+  public int add(int a, int b){
     return a+b;
   }
 }
