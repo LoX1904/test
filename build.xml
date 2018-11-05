@@ -4,7 +4,7 @@
    <property name = "src.dir" value ="test"/>
    <property name = "build.dir" value ="classes"/>
    
-   <path id = "master-classes">
+   <path id = "master-classpath">
       <fileset dir = "${build.dir}/lib">
          <include name = "*.jar"/>
       </fileset>
