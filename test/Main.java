@@ -1,5 +1,5 @@
 package test;
-import Func;
+import test.Func;
 
 public class Main{  
   public static void main(String[] args){
