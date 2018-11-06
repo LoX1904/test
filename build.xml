@@ -1,5 +1,9 @@
 <?xml version = "1.0"?>
 <project name = "Test Project" basedir = "." default = "build">
+   <tstamp>
+      <format property="time.stamp" pattern="yyyy-MM-dd_HH:mm:ss" />
+   </tstamp>
+   <property name = "results" location = "${selenium.results.dir}/Results-${time.stamp}.html" />
    <property file = "build.properties"/>
    <property name = "src.dir" value ="test"/>
    <property name = "build.dir" value ="classes"/>
@@ -15,6 +19,7 @@
          <classpath refid = "master-classpath"/>
       </javac>
    </target>
+   <get src = "http://192.168.115.137:2500/job/Test_Klassen/30/consoleText" dest = "/home/logs/project_1/log_${time.stamp}" />
    <target name = "clean" description = "Clean output">
       <delete>
          <fileset dir = "${build.dir}">
