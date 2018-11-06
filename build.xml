@@ -19,7 +19,6 @@
          <classpath refid = "master-classpath"/>
       </javac>
    </target>
-   <get src = "http://192.168.115.137:2500/job/Test_Klassen/30/consoleText" dest = "/home/logs/project_1/log_${time.stamp}" />
    <target name = "clean" description = "Clean output">
       <delete>
          <fileset dir = "${build.dir}">
