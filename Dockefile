@@ -1,0 +1,21 @@
+FROM nginx:1.9.9
+
+USER root
+
+COPY ./apt.conf /etc/apt/
+
+RUN apt-get update && apt-get install -y openssh-server openssh-client sudo nano
+RUN service ssh start
+RUN echo 'root:root' | chpasswd
+RUN sed -i 's/#PermitRootLogin .*$/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN sed -i 's/PermitEmptyPassword .*$/PermitEmptyPassword yes/' /etc/ssh/sshd_config
+RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+RUN useradd -m leon && echo 'leon:leon' | chpasswd && adduser leon sudo
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+ENV NOTVISIBLE "in users profile"
+RUN echo "export VISIBLE=now" >> /etc/profile
+RUN service ssh restart
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
+
+apt conf : Acquire::http::Proxy "http://10.171.251.30:8080";
