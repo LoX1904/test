@@ -1,7 +1,7 @@
 package test;
 
 import test.fu.Func;
-import test.fu.Bla;
+import test.fu.another.Bla;
 import java.util.Scanner;
 import java.io.*;
 public class Main{  
