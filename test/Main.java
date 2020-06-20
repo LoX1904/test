@@ -19,5 +19,11 @@ public class Main{
     
     System.out.println("Hello");
     Bla.ausgeben("Test");
+    try{
+      throw new NullPointerException();
+    }
+    catch(Exception e{
+      System.out.println(e);
+    }
   }
 }
