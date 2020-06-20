@@ -1,4 +1,4 @@
-package test.fu.ck;
+package test.fu;
 
 public class Bla{
   
