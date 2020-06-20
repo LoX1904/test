@@ -22,7 +22,7 @@ public class Main{
     try{
       throw new NullPointerException();
     }
-    catch(Exception e{
+    catch(Exception e){
       System.out.println(e);
     }
   }
