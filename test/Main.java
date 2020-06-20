@@ -11,7 +11,7 @@ public class Main{
     Scanner s = new Scanner(System.in);
     int value = s.nextInt();
     
-    System.out.println("A");
+    System.out.println("B");
     
     Func f = new Func();
     System.out.println(f.add(value, 2));
