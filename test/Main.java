@@ -13,6 +13,8 @@ public class Main{
     
     System.out.println("A");
     
+    System.out.println("B");
+    
     Func f = new Func();
     System.out.println(f.add(value, 2));
     f.sayHI();
